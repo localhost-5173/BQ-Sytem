@@ -1,0 +1,95 @@
+# ==========================================
+# 1. Environment & Secrets (Har Subfolder Ke Liye)
+# ==========================================
+**/.env*
+**/.env
+**/.env.development
+**/.env.example
+**/.env.production
+**/.env.local
+**/.env.development.local
+**/.env.test.local
+**/.env.production.local
+*.pem
+
+# ==========================================
+# 2. Dependencies & Heavy Packages
+# ==========================================
+**/node_modules/
+**/.pnpm-store/
+**/pnpm-debug.log*
+
+# ==========================================
+# 3. React Builds & Compiled Outputs
+# ==========================================
+# Standard React (CRA) build
+**/build/
+**/dist/
+**/out/
+
+# Next.js specific
+**/.next/
+
+# Vite specific
+**/.vite/
+
+# Gatsby / Remix / VuePress
+**/.cache/
+**/.turbo/
+
+# ==========================================
+# 4. Logs & Debugging Files
+# ==========================================
+**/logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# ==========================================
+# 5. Testing & Coverage Reports
+# ==========================================
+**/coverage/
+**/.nyc_output/
+
+# ==========================================
+# 6. Linters & Cache Files
+# ==========================================
+**/.eslintcache
+**/.stylelintcache
+**/.tsbuildinfo
+
+# ==========================================
+# 7. OS & Editor System Files
+# ==========================================
+.DS_Store
+.DS_Store?
+Thumbs.db
+ehthumbs.db
+
+# VS Code & IDE settings
+**/.vscode/*
+!**/.vscode/settings.json
+!**/.vscode/tasks.json
+!**/.vscode/launch.json
+**/.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+Temporary Backups
+
+**/_config-backups/
+
+Debug Output Files
+
+**/tsc_output.txt
+**/tsc_output_cmd.txt
+
+Temporary Debug Scripts (only if disposable)
+
+**/debug_notif.js
+**/verify_api.js

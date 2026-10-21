@@ -1,0 +1,28 @@
+# Dependencies
+node_modules/
+.node_modules.lock
+
+# Build output / generated
+dist/
+.output/
+.nitro/
+.vercel/
+.tanstack/
+
+# Environment (the platform injects these; never commit)
+.env
+.env.*
+
+# QA output (browser-smoke writes here; directory kept via .gitkeep)
+screenshots/*
+!screenshots/.gitkeep
+
+# Platform runtime state
+.grok/status
+.grok/preview.pid
+.grok/preview.log
+.grok/og-pending
+
+# Logs / OS
+*.log
+.DS_Store

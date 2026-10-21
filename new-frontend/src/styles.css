@@ -1,0 +1,107 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+
+  --color-background: #eef1f8;
+  --color-foreground: #1c2333;
+  --color-card: #ffffff;
+  --color-card-foreground: #1c2333;
+  --color-popover: #ffffff;
+  --color-popover-foreground: #1c2333;
+  --color-primary: #2c3550;
+  --color-primary-foreground: #f7f8fc;
+  --color-secondary: #eef1f8;
+  --color-secondary-foreground: #1c2333;
+  --color-muted: #f4f6fb;
+  --color-muted-foreground: #7b8499;
+  --color-accent: #e8ecf6;
+  --color-accent-foreground: #1c2333;
+  --color-destructive: #c23b4a;
+  --color-destructive-foreground: #ffffff;
+  --color-border: #e4e8f0;
+  --color-input: #e4e8f0;
+  --color-ring: #2c3550;
+
+  --color-present: #d8f3e7;
+  --color-present-fg: #1b6b45;
+  --color-late: #f6ead3;
+  --color-late-fg: #8a6418;
+  --color-absent: #f6dde1;
+  --color-absent-fg: #b43344;
+  --color-incomplete: #e6eaf2;
+  --color-incomplete-fg: #5a6478;
+  --color-nav: #8b93a7;
+  --color-ink: #1c2333;
+
+  --radius-sm: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1.25rem;
+  --radius-xl: 1.75rem;
+  --radius-2xl: 2rem;
+  --radius: 1.25rem;
+
+  --shadow-card: 0 10px 40px rgba(44, 53, 80, 0.06);
+  --shadow-nav: 0 12px 40px rgba(44, 53, 80, 0.08);
+  --shadow-soft: 0 1px 2px rgba(44, 53, 80, 0.04), 0 6px 20px rgba(44, 53, 80, 0.05);
+  --shadow-pill: 0 4px 16px rgba(44, 53, 80, 0.1);
+
+  --ease-out-smooth: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    min-height: 100dvh;
+  }
+
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  background-image:
+    radial-gradient(1200px 500px at 50% -10%, rgba(255, 255, 255, 0.7), transparent 70%),
+    linear-gradient(180deg, #e8ecf6 0%, #eef1f8 42%, #f3f5fb 100%);
+  background-attachment: fixed;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
